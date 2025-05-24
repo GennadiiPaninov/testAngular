@@ -1,6 +1,6 @@
 import {Injectable, inject} from '@angular/core';
 import {Actions, createEffect, ofType} from '@ngrx/effects';
-import {catchError, map, mergeMap} from 'rxjs/operators';
+import {catchError, delay, map, mergeMap} from 'rxjs/operators';
 import {concat, debounceTime, of} from 'rxjs';
 import {
   loadUsers,
@@ -23,7 +23,7 @@ export class UsersEffects {
       ofType(loadUsers),
       mergeMap(() =>
         concat(
-          of(toggleLoader({isLoading: true})),
+          of(toggleLoader({ isLoading: true })).pipe(delay(0)),
           this.usersService.getUsers().pipe(
             map(users => loadUsersSuccess({users})),
             catchError(error => of(loadUsersFailure({error: error.message})))

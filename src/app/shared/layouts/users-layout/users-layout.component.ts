@@ -24,4 +24,5 @@ export class UsersLayoutComponent {
 
   private store = inject(Store)
   isLoading$: Observable<boolean> = this.store.select(selectLoading)
+
 }

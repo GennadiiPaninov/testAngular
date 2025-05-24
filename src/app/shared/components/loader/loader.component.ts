@@ -8,6 +8,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   styleUrl: './loader.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
+
 export class LoaderComponent {
 
 }

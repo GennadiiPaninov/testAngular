@@ -41,8 +41,17 @@
 }
 .btn-sort {
   padding: 1.5rem 1.5rem;
+  background: var(--backround);
+
+  &:hover{
+    background: var(--backroundH);
+  }
+  &:active{
+    background: var(--backroundA);
+
+  }
   @include breakpoint($sm-bp) {
-    font-size: .9rem;
+    font-size: 1rem;
     width: 100%;
   }
 }
