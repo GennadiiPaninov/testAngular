@@ -1,9 +1,15 @@
 import {Injectable, inject} from '@angular/core';
 import {Actions, createEffect, ofType} from '@ngrx/effects';
-import {catchError, map, mergeMap, tap} from 'rxjs/operators';
+import {catchError, map, mergeMap} from 'rxjs/operators';
 import {concat, debounceTime, of} from 'rxjs';
-
-import {loadUsers, loadUsersSuccess, loadUsersFailure} from './users.actions';
+import {
+  loadUsers,
+  loadUsersSuccess,
+  loadUsersFailure,
+  searchByName,
+  searchByEmail,
+  startSearchByName, startSearchByEmail
+} from './users.actions';
 import {UsersService} from "../../core/services/usersService/users.service";
 import {toggleLoader} from "../global/global.actions";
 
@@ -26,5 +32,17 @@ export class UsersEffects {
         )
       )
     )
-  );
+  )
+  searchUsers$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType(startSearchByName, startSearchByEmail),
+      debounceTime(300),
+      map(action => {
+        if (action.type === startSearchByName.type) {
+          return searchByName({ searchName: action.searchName })
+        }
+        return searchByEmail({ searchEmail: action.searchEmail })
+      })
+    )
+  )
 }

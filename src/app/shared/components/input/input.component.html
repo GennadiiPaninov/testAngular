@@ -1,0 +1,22 @@
+<div class="input-container">
+  <svg
+    class="icon"
+    xmlns="http://www.w3.org/2000/svg"
+    focusable="false"
+    aria-hidden="true"
+  >
+    <use href="'../../../assets/icons.svg#search"></use>
+  </svg>
+  <input
+    [type]="type"
+    [id]="id"
+    [placeholder]="placeholder"
+    [value]="value"
+    (input)="onInput($event)"
+    (blur)="onBlur()"
+    (focus)="onFocus()"
+    [disabled]="disabled"
+    class="input"
+    [attr.autocomplete]="autocomplete"
+  />
+</div>

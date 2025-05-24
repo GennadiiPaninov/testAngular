@@ -13,3 +13,19 @@ export const loadUsersFailure = createAction(
 export const sortUsersByField = createAction('sort users by',
   props<{ field: "email" | "name", direction: 'asc' | 'desc'}>()
 )
+export const searchByName = createAction(
+  '[Users Page] Search By Name',
+  props<{ searchName: string }>()
+)
+export const searchByEmail = createAction(
+  '[Users Page] Search By Email',
+  props<{ searchEmail: string }>()
+)
+export const startSearchByName = createAction(
+  '[Users Page] Start Search By Name',
+  props<{ searchName: string }>()
+)
+export const startSearchByEmail = createAction(
+  '[Users Page] Start Search By Email',
+  props<{ searchEmail: string }>()
+)

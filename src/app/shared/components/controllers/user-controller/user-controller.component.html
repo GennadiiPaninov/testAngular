@@ -1,25 +1,31 @@
-<app-button variant="sort" (clicked)="sortBy('email')">
-  <svg
-    *ngIf="isActive('email')"
-    class="icon"
-    [ngClass]="{ 'rotate-180': isDesc('email') }"
-    focusable="false"
-    aria-hidden="true"
-  >
-    <use href="../../assets/icons.svg#sortArrow"></use>
-  </svg>
-  <p>Сортировка по Email</p>
-</app-button>
+<div class="btn-controller">
+  <app-button variant="sort" (clicked)="sortBy('email')">
+    <svg
+      *ngIf="isActive('email')"
+      class="icon"
+      [ngClass]="{ 'rotate-180': isDesc('email') }"
+      focusable="false"
+      aria-hidden="true"
+    >
+      <use href="../../assets/icons.svg#sortArrow"></use>
+    </svg>
+    <p>Сортировка по Email</p>
+  </app-button>
 
-<app-button variant="sort" (clicked)="sortBy('name')">
-  <svg
-    *ngIf="isActive('name')"
-    class="icon"
-    [ngClass]="{ 'rotate-180': isDesc('name') }"
-    focusable="false"
-    aria-hidden="true"
-  >
-    <use href="../../assets/icons.svg#sortArrow"></use>
-  </svg>
-  <p>Сортировка по Name</p>
-</app-button>
+  <app-button variant="sort" (clicked)="sortBy('name')">
+    <svg
+      *ngIf="isActive('name')"
+      class="icon"
+      [ngClass]="{ 'rotate-180': isDesc('name') }"
+      focusable="false"
+      aria-hidden="true"
+    >
+      <use href="../../assets/icons.svg#sortArrow"></use>
+    </svg>
+    <p>Сортировка по Name</p>
+  </app-button>
+</div>
+
+
+<app-input placeholder="Поиск по name" (valueChange)="onSearchName($event)"></app-input>
+<app-input placeholder="Поиск по email" (valueChange)="onSearchEmail($event)"></app-input>

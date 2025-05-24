@@ -30,5 +30,8 @@ export interface User {
 
 export interface UsersState {
   users: User[]
+  originalUsers: User[]
   error: string | null
+  searchName: string
+  searchEmail: string
 }
