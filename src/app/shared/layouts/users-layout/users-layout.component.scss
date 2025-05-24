@@ -1,0 +1,12 @@
+@use '../../../../assets/styles/mixins' as *;
+.users-container{
+  display: flex;
+  flex-direction: column;
+  width: var(--deckW);
+  margin: 0 auto;
+  padding: 3rem 0;
+  gap: 3rem;
+  @include breakpoint($sm-bp) {
+    width: var(--mobW);
+  }
+}

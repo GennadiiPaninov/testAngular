@@ -1,0 +1,8 @@
+
+<div class="users-container">
+  <app-user-item
+    *ngFor="let user of users$ | async; trackBy: trackById"
+    [user]='user'
+  >
+  </app-user-item>
+</div>

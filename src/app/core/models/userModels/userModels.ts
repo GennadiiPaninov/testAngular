@@ -27,3 +27,8 @@ export interface User {
   website: string
   company: Company
 }
+
+export interface UsersState {
+  users: User[]
+  error: string | null
+}

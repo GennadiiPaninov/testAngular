@@ -1,0 +1,12 @@
+@use '../../../assets/styles/mixins' as *;
+.users-container{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include breakpoint($sm-bp) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}

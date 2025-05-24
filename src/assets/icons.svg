@@ -1,14 +1,20 @@
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-  <symbol viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#272343" id="cursor">
+  <symbol viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" id="user">
     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
     <g id="SVGRepo_iconCarrier">
-      <path d="M8 3V0H6V3H8Z" fill="#272343"></path>
-      <path d="M0.792893 2.20711L3.29289 4.70711L4.70711 3.29289L2.20711 0.792893L0.792893 2.20711Z"
+      <path d="M8 7C9.65685 7 11 5.65685 11 4C11 2.34315 9.65685 1 8 1C6.34315 1 5 2.34315 5 4C5 5.65685 6.34315 7 8 7Z"
             fill="#272343"></path>
-      <path d="M6 5L5 6.00001L8 15H10L10.7172 12.1314L14.2929 15.7071L15.7071 14.2929L12.1314 10.7172L15 10V8L6 5Z"
-            fill="#272343"></path>
-      <path d="M0 6H3V8H0V6Z" fill="#272343"></path>
+      <path d="M14 12C14 10.3431 12.6569 9 11 9H5C3.34315 9 2 10.3431 2 12V15H14V12Z" fill="#272343"></path>
+    </g>
+  </symbol>
+  <symbol viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" id="sortArrow">
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+    <g id="SVGRepo_iconCarrier">
+      <path
+        d="M8.00003 8.1716L3.41424 3.58582L0.585815 6.41424L8.00003 13.8285L15.4142 6.41424L12.5858 3.58582L8.00003 8.1716Z"
+        fill="#272343"></path>
     </g>
   </symbol>
 </svg>
