@@ -1,0 +1,8 @@
+@mixin breakpoint($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}
+
+$sm-bp: 500px;
+
