@@ -1,8 +1,8 @@
-import {ApplicationConfig, importProvidersFrom} from '@angular/core';
+import {ApplicationConfig} from '@angular/core';
 import { provideRouter } from '@angular/router';
 
 import { routes } from './app.routes';
-import {HttpClientModule} from "@angular/common/http";
+import {provideHttpClient} from "@angular/common/http";
 import { provideStore } from '@ngrx/store';
 import { provideEffects } from '@ngrx/effects';
 import {globalReducer} from "./store/global/global.reducer";
@@ -10,7 +10,7 @@ import {globalReducer} from "./store/global/global.reducer";
 export const appConfig: ApplicationConfig = {
   providers: [
     provideRouter(routes),
-    importProvidersFrom(HttpClientModule),
+    provideHttpClient(),
     provideStore({global: globalReducer}),
     provideEffects()
   ]
